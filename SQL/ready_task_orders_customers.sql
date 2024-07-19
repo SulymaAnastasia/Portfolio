@@ -31,7 +31,7 @@ CREATE TABLE customers
  ('BOLID', 'Bólido Comidas preparadas', 'C/ Araquil, 67', 'MadridCity', 'Spain')
 
 SELECT * from customers
-drop TABLE Orders
+
 CREATE TABLE Orders (
     OrderID INT PRIMARY KEY,
     CustomersID VARCHAR(255),
