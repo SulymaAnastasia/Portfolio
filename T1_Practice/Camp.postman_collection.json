@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "331aa3d5-8b3e-49c8-8247-f27fc60c1768",
+		"name": "Camp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28579161"
+	},
+	"item": [
+		{
+			"name": "Get получить перечень ролей",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://193.19.100.32:7000/api/get-roles",
+					"protocol": "http",
+					"host": [
+						"193",
+						"19",
+						"100",
+						"32"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"get-roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get получить перечень ролей Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"last_name\": \"Сулыма\",\r\n    \"first_name\": \"Анастасия\",\r\n    \"email\": \"asulyma-1@mail.ru\",\r\n    \"role\": \"Тестировщик\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://193.19.100.32:7000/api/sign-up",
+					"protocol": "http",
+					"host": [
+						"193",
+						"19",
+						"100",
+						"32"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get получить токен",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "c3c9051fef6b291ad5af988f0090d907",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "code",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://193.19.100.32:7000/api/encode-token?email=sulyma13@mail.ru",
+					"protocol": "http",
+					"host": [
+						"193",
+						"19",
+						"100",
+						"32"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"encode-token"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sulyma13@mail.ru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post получение токен Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sulyma13@mail.ru\",\r\n    \"code\": \"c3c9051fef6b291ad5af988f0090d907\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://193.19.100.32:7000/api/encode-token",
+					"protocol": "http",
+					"host": [
+						"193",
+						"19",
+						"100",
+						"32"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"encode-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set status",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"token\": \"c3VseW1hMTNAbWFpbC5ydTpjM2M5MDUxZmVmNmIyOTFhZDVhZjk4OGYwMDkwZDkwNw==\",\r\n  \"status\": \"increased\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://193.19.100.32:7000/api/set-status",
+					"protocol": "http",
+					"host": [
+						"193",
+						"19",
+						"100",
+						"32"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"set-status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
